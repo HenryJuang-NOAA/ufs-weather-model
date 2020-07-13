@@ -92,6 +92,7 @@ export INPES=$INPES_dflt
 export JNPES=$JNPES_dflt
 export TASKS=$TASKS_dflt
 export TPN=$TPN_dflt
+export RESTART_INTERVAL=0
 export QUILTING=.true.
 export WRITE_GROUP=1
 export WRTTASK_PER_GROUP=6
@@ -147,10 +148,13 @@ export DO_MYJPBL=.F.
 
 # Shallow/deep convection
 export IMFSHALCNV=2
+export HWRF_SAMFSHAL=.F.
 export IMFDEEPCNV=2
+export HWRF_SAMFDEEP=.F.
 
 # SFC
 export DO_MYJSFC=.F.
+export DO_MYNNSFCLAY=.F.
 
 # LSM
 export LSM=1
@@ -191,6 +195,9 @@ export SHOUR=00
 export FHMAX=${FHMAX:-`expr $DAYS \* 24`}
 export DT_ATMOS=1800
 export FHCYC=24
+export LDIAG3D=.F.
+export QDIAG3D=.F.
+export MAX_OUTPUT_FIELDS=300
 
 # Stochastic physics
 export DO_SPPT=.F.
@@ -203,6 +210,12 @@ export SHUM=-999.
 
 #IAU
 export IAU_INC_FILES="''"
+
+#Cellular automata
+export DO_CA=.F.
+export CA_SGS=.F.
+export CA_GLOBAL=.F.
+
 export IAU_DRYMASSFIXER=.false.
 
 # Regional
